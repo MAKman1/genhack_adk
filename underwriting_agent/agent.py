@@ -19,12 +19,19 @@ underwriting_coordinator_agent = LlmAgent(
     ),
     instruction=prompt.UNDERWRITING_COORDINATOR_PROMPT,
     output_key="underwriting_coordinator_output",
-    tools=[
-        AgentTool(agent=application_intake_agent),
-        AgentTool(agent=financial_analysis_agent),
-        AgentTool(agent=credit_risk_assessment_agent),
-        AgentTool(agent=loan_structuring_agent),
-    ],
+    #TODO Define the tools for the Underwriting Coordinator Agent.
+    #     This coordinator orchestrates various underwriting sub-agents.
+    #     1. Import the `AgentTool` class from `google.adk.tools.agent_tool`.
+    #     2. For each imported sub-agent below, create an `AgentTool` instance:
+    #        - application_intake_agent
+    #        - financial_analysis_agent
+    #        - credit_risk_assessment_agent
+    #        - loan_structuring_agent
+    #     3. Assemble these `AgentTool` instances into a list for the `tools` parameter.
+    #     Refer to ADK documentation on how to use AgentTool to integrate sub-agents.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of AgentTool instances
+    #====End your code here====
 )
 
 root_agent = underwriting_coordinator_agent

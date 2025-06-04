@@ -19,9 +19,15 @@ entity_linkage_analysis_agent = Agent(
     name="entity_linkage_analysis_agent",
     instruction=prompt.ENTITY_LINKAGE_ANALYSIS_PROMPT,
     output_key="entity_linkage_analysis_output",
-    tools=[
-        check_entity_against_watchlists,
-        get_company_director_information,
-        fetch_user_profile, # Assuming it's available via aml_agent.bank_api_client
-    ],
+    #TODO Define the tools for the Entity Linkage Analysis Agent.
+    #     This agent needs tools to gather information about entities (individuals and companies).
+    #     1. Import the necessary functions from `aml_agent.bank_api_client`:
+    #        - `check_entity_against_watchlists`
+    #        - `get_company_director_information`
+    #        - `fetch_user_profile`
+    #     2. Create a list containing these imported functions.
+    #     Refer to the ADK documentation for how to add tools to an agent.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of tools
+    #====End your code here====
 )

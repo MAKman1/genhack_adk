@@ -17,8 +17,14 @@ financial_analysis_agent = Agent(
     name="financial_analysis_agent",
     instruction=prompt.FINANCIAL_ANALYSIS_PROMPT,
     output_key="financial_analysis_output",
-    tools=[
-        fetch_transaction_history
-        # read_file_tool # Adding read_file_tool explicitly
-    ],
+    #TODO Define the tools for the Financial Analysis Agent.
+    #     This agent is responsible for analyzing financial data, including transaction history and potentially documents.
+    #     1. Import `fetch_transaction_history` from `underwriting_agent.bank_api_client`.
+    #     2. Consider if the `read_file` tool is needed for analyzing financial statements or other documents.
+    #        If so, include `read_file` directly in the list (it's a system-provided tool).
+    #     3. Create a list containing these functions/tools.
+    #     Refer to the ADK documentation for how to add tools to an agent.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of tools
+    #====End your code here====
 )

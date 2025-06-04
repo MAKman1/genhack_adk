@@ -23,13 +23,17 @@ application_intake_agent = Agent(
     name="application_intake_agent",
     instruction=prompt.APPLICATION_INTAKE_PROMPT,
     output_key="application_intake_output",
-    tools=[
-        fetch_user_profile,
-        fetch_account_details,
-        create_loan_application,
-        # read_file # If read_file needs to be explicitly listed as a tool for the agent.
-                  # ADK documentation implies standard tools might not need to be listed.
-                  # For now, I'll omit it and assume it's available if the LLM calls it.
-                  # If testing shows it's needed, we can add it.
-    ],
+    #TODO Define the tools for the Application Intake Agent.
+    #     This agent is responsible for gathering initial application data and user information.
+    #     1. Import the necessary functions from `underwriting_agent.bank_api_client`:
+    #        - `fetch_user_profile`
+    #        - `fetch_account_details`
+    #        - `create_loan_application`
+    #     2. Consider if the `read_file` tool is needed (e.g., for reading uploaded documents).
+    #        If so, include `read_file` directly in the list (it's a system-provided tool).
+    #     3. Create a list containing these functions/tools.
+    #     Refer to the ADK documentation for how to add tools to an agent.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of tools
+    #====End your code here====
 )

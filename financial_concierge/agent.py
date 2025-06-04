@@ -38,14 +38,21 @@ financial_coordinator = LlmAgent(
     ),
     instruction=prompt.FINANCIAL_COORDINATOR_PROMPT,
     output_key="financial_coordinator_output",
-    tools=[
-        AgentTool(agent=data_analyst_agent),
-        AgentTool(agent=account_data_agent),
-        AgentTool(agent=credit_eligibility_agent),
-        AgentTool(agent=spending_advisor_agent),
-        AgentTool(agent=savings_goal_advisor_agent),
-        AgentTool(agent=faq_agent),
-    ],
+    #TODO Define the tools for the Financial Coordinator.
+    #     This coordinator orchestrates various financial sub-agents.
+    #     1. Import the `AgentTool` class from `google.adk.tools.agent_tool`.
+    #     2. For each imported sub-agent below, create an `AgentTool` instance:
+    #        - data_analyst_agent
+    #        - account_data_agent
+    #        - credit_eligibility_agent
+    #        - spending_advisor_agent
+    #        - savings_goal_advisor_agent
+    #        - faq_agent
+    #     3. Assemble these `AgentTool` instances into a list for the `tools` parameter.
+    #     Refer to ADK documentation on how to use AgentTool to integrate sub-agents.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of AgentTool instances
+    #====End your code here====
 )
 
 root_agent = financial_coordinator

@@ -25,5 +25,12 @@ data_analyst_agent = Agent(
     name="data_analyst_agent",
     instruction=prompt.DATA_ANALYST_PROMPT,
     output_key="market_data_analysis_output",
-    tools=[google_search],
+    #TODO Define the tools for the Data Analyst Agent.
+    #     This agent is responsible for finding information using Google Search.
+    #     1. Import the `google_search` tool from `google.adk.tools`.
+    #     2. Create a list containing the imported `google_search` tool.
+    #     Refer to the ADK documentation for available built-in tools and how to add them.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of tools
+    #====End your code here====
 )

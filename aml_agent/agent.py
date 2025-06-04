@@ -37,13 +37,17 @@ aml_coordinator_agent = LlmAgent(
     ),
     instruction=prompt.AML_COORDINATOR_PROMPT, # Uses the new AML prompt
     output_key="aml_coordinator_output",
-    tools=[
-        fetch_transaction_history, # Add the direct API call tool
-        AgentTool(agent=transaction_pattern_analysis_agent),
-        AgentTool(agent=geographic_risk_assessment_agent),
-        AgentTool(agent=entity_linkage_analysis_agent),
-        AgentTool(agent=aml_policy_alignment_agent),
-    ],
+    #TODO Define the tools for the AML Coordinator. This should include:
+    #     1. A tool to fetch transaction history directly (hint: it's already imported as fetch_transaction_history).
+    #     2. AgentTools for each of the imported sub-agents:
+    #        - transaction_pattern_analysis_agent
+    #        - geographic_risk_assessment_agent
+    #        - entity_linkage_analysis_agent
+    #        - aml_policy_alignment_agent
+    #     Refer to the ADK documentation for how to add tools and AgentTools.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of tools
+    #====End your code here====
 )
 
 root_agent = aml_coordinator_agent

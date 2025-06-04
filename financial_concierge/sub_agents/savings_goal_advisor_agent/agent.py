@@ -17,12 +17,18 @@ savings_goal_advisor_agent = Agent(
     name="savings_goal_advisor_agent",
     instruction=prompt.SAVINGS_GOAL_ADVISOR_PROMPT,
     output_key="savings_goal_advisor_output",
-    tools=[
-        create_savings_goal,
-        get_savings_goals,
-        update_savings_goal,
-        delete_savings_goal,
-        fetch_transaction_history,
-        fetch_account_details,
-    ],
+    #TODO Define the tools for the Savings Goal Advisor Agent.
+    #     This agent helps users create, manage, and track their savings goals.
+    #     1. Import the necessary functions from `financial_concierge.bank_api_client`:
+    #        - `create_savings_goal`
+    #        - `get_savings_goals`
+    #        - `update_savings_goal`
+    #        - `delete_savings_goal`
+    #        - `fetch_transaction_history` (to analyze spending and suggest contributions)
+    #        - `fetch_account_details` (for context like current balance)
+    #     2. Create a list containing these imported functions.
+    #     Refer to the ADK documentation for how to add tools to an agent.
+    #====Start your code here====
+    tools=[], # Replace this with the actual list of tools
+    #====End your code here====
 )
