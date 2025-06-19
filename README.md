@@ -1,4 +1,4 @@
-# Moneypenny's Bank Agent System
+# Moneypenny's Bank Agent System (ADK)
 
 This project contains the Moneypenny's Bank Financial Concierge agent and related components.
 
